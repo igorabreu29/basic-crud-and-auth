@@ -11,12 +11,16 @@ Projeto desenvolvido para o teste de aplicação de uma empresa, onde pode-se re
 
 ### Etapas para rodar o projeto
 - Adicione um arquivo .env para poder fazer a configuração do ambiente(Siga o modelo do arquivo .env.example)
-- Ter um banco de dados Postgres chamado "system_login" para funcionar o ORM prisma, ou altere na url o nome database
+- Ter um banco de dados Postgres chamado "system_login" para funcionar o ORM prisma, ou altere na url o nome do banco de dados
+
+Exemplo url prisma:
+```
+    DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/DATABASE?schema=public"
+```
 
 - Após isso reset e rode as migrations do prisma
 ```bash
-    npx prisma migrate reset
-    npx prisma migrate dev
+    npx prisma migrate deploy
 ```
 
 - Por fim, rode o projeto local
