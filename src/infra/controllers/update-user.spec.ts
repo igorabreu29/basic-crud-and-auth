@@ -30,15 +30,18 @@ describe('Update User (e2e)', () => {
 
         const response = await request(app.server)
             .put(`/update-user/${userId}`)
-            .send(defaultUserData())
+            .send(defaultUserData({
+                name: 'João',
+                email: 'joao20@test.com'
+            }))
 
         expect(response.statusCode).toEqual(200)
         expect(response.body.user).toEqual(
             expect.objectContaining({
                 id: expect.any(String),
-                name: 'John',
+                name: 'João',
                 lastname: 'Doe',
-                email: 'john@john.com',
+                email: 'joao20@test.com',
                 password: expect.any(String)
             })
         )
