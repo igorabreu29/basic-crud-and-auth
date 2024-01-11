@@ -11,6 +11,7 @@ Projeto desenvolvido para o teste de aplicação de uma empresa, onde pode-se re
 
 ### Etapas para rodar o projeto
 - Adicione um arquivo .env para poder fazer a configuração do ambiente(Siga o modelo do arquivo .env.example)
+- Ter um banco de dados Postgres chamado "system_login" para funcionar o ORM prisma, ou altere na url o nome database
 
 - Após isso reset e rode as migrations do prisma
 ```bash
