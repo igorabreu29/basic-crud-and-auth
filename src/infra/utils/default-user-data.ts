@@ -19,7 +19,7 @@ export function defaultUserData(
     return {
         name: 'John',
         lastname: 'Doe',
-        gender: "male",
+        gender: "masculino",
         birth: '14/05/2001',
         address: 'Rua Desconhecida',
         age: 21,

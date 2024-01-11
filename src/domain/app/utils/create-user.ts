@@ -5,7 +5,7 @@ export async function createUserInstance() {
     return User.create({
         name: 'John',
         lastname: 'Doe',
-        gender: "male" as Gender,
+        gender: "masculino" as Gender,
         birth: '29/01/2001',
         address: 'Rua Desconhecida',
         age: 22,

@@ -17,7 +17,7 @@ export async function updateUser(req: FastifyRequest, res: FastifyReply) {
         age: z.number(),
         address: z.string(),
         birth: z.string(),
-        gender: z.enum(['male', 'female']),
+        gender: z.enum(['masculino', 'feminíno']),
         father: z.string(),
         mother: z.string(),
         email: z.string().email('Invalid email.'),

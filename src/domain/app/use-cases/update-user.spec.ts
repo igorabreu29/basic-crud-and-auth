@@ -28,7 +28,7 @@ describe('Update User Use Case', () => {
         const data = {
             name: 'Joaninha',
             lastname: 'Nova',
-            gender: "female" as Gender,
+            gender: "feminíno" as Gender,
             birth: '12/05/2001',
             address: 'Rua Nova',
             age: 21,
@@ -45,7 +45,7 @@ describe('Update User Use Case', () => {
             expect.objectContaining({
                 name: 'Joaninha',
                 lastname: 'Nova',
-                gender: "female",
+                gender: "feminíno",
                 birth: '12/05/2001',
                 address: 'Rua Nova',
                 age: 21,
@@ -62,7 +62,7 @@ describe('Update User Use Case', () => {
         const data = {
             name: 'Joaninha',
             lastname: 'Nova',
-            gender: "female" as Gender,
+            gender: "feminíno" as Gender,
             birth: '12/05/2001',
             address: 'Rua Nova',
             age: 23,
@@ -87,7 +87,7 @@ describe('Update User Use Case', () => {
         const data = {
             name: 'Joaninha',
             lastname: 'Nova',
-            gender: "female" as Gender,
+            gender: "feminíno" as Gender,
             birth: '12/05/2001',
             address: 'Rua Nova',
             age: 23,

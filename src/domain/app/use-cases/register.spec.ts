@@ -27,7 +27,7 @@ describe('Register Use Case', () => {
         const data = {
             name: 'John',
             lastname: 'Doe',
-            gender: "male" as Gender,
+            gender: "masculino" as Gender,
             birth: '29/02/2001',
             address: 'Rua Desconhecida',
             age: 21,
@@ -44,7 +44,7 @@ describe('Register Use Case', () => {
             expect.objectContaining({
                 name: 'John',
                 lastname: 'Doe',
-                gender: "male",
+                gender: "masculino",
                 birth: '29/02/2001',
                 address: 'Rua Desconhecida',
                 age: 21,
@@ -61,7 +61,7 @@ describe('Register Use Case', () => {
         const data = {
             name: 'John',
             lastname: 'Doe',
-            gender: "male" as Gender,
+            gender: "masculino" as Gender,
             birth: '29/02/2001',
             address: 'Rua Desconhecida',
             age: 22,
@@ -84,7 +84,7 @@ describe('Register Use Case', () => {
         const data = {
             name: 'John',
             lastname: 'Doe',
-            gender: "male" as Gender,
+            gender: "masculino" as Gender,
             birth: '29/02/2001',
             address: 'Rua Desconhecida',
             age: 22,

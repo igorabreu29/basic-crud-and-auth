@@ -32,7 +32,7 @@ describe('Fetch Users (e2e)', () => {
             .send(defaultUserData({
                 name: 'Mariazinha',
                 lastname: 'Nova',
-                gender: "female",
+                gender: "feminíno",
                 birth: '12/07/2001',
                 address: 'Rua Nova',
                 age: 21,
@@ -52,14 +52,14 @@ describe('Fetch Users (e2e)', () => {
                 id: expect.any(String),
                 name: 'John',
                 lastname: 'Doe',
-                gender: 'male',
+                gender: 'masculino',
                 age: 21
             }),
             expect.objectContaining({
                 id: expect.any(String),
                 name: 'Mariazinha',
                 lastname: 'Nova',
-                gender: 'female',
+                gender: 'feminíno',
                 age: 21
             })
         ])

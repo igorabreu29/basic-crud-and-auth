@@ -5,7 +5,7 @@ export interface Parents {
     mother: string
 }
 
-export type Gender = 'male' | 'female'
+export type Gender = 'masculino' | 'feminíno'
 
 export interface UserProps {
     name: string

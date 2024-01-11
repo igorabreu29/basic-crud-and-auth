@@ -16,7 +16,7 @@ describe('User entity', () => {
         const user = User.create({
             name: 'John',
             lastname: 'Doe',
-            gender: "male",
+            gender: "masculino",
             birth: '14/04/2001',
             address: 'Rua Desconhecida',
             age: 21,
@@ -44,7 +44,7 @@ describe('User entity', () => {
         const user = User.create({
             name: 'John',
             lastname: 'Doe',
-            gender: "male",
+            gender: "masculino",
             birth: '14/04/2001',
             address: 'Rua Desconhecida',
             age: 23,
