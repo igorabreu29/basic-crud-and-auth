@@ -7,8 +7,8 @@ Content-Type: application/json
     "password": "joanaw",
     "lastname": "Abreu",
     "birth": "20/09/2002",
-    "age": 22,
-    "gender": "female",
+    "age": 21,
+    "gender": "masculino",
     "father": "Mario Abreu",
     "mother": "Maria Abreu",
     "address": "Unknow Street"
@@ -24,10 +24,10 @@ Content-Type: application/json
 }
 
 ### 
-DELETE http://localhost:3333/delete-user/clr8aoch500028bo4jr1gsniq
+DELETE http://localhost:3333/delete-user/clr9fmg5j0000j7ul460mlbi9
 
 ###
-PUT  http://localhost:3333/update-user/clr9e3vpo0000z8prgz6lj3os
+PUT  http://localhost:3333/update-user/clr9fmg5j0000j7ul460mlbi9
 Content-Type: application/json
 
 {
@@ -37,7 +37,7 @@ Content-Type: application/json
     "lastname": "Abreu",
     "birth": "20/09/2002",
     "age": 21,
-    "gender": "male",
+    "gender": "masculino",
     "father": "Mario Abreu",
     "mother": "Maria Abreu",
     "address": "Know Street"
@@ -48,4 +48,4 @@ GET http://localhost:3333/users
 
 ### 
 GET http://localhost:3333/resource
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9hbyIsImVtYWlsIjoiam9hb0Bqb2FvLmNvbSIsInN1YiI6ImNscjhhcnJyNDAwMDM4Ym80MXQ2aXBvZXkiLCJpYXQiOjE3MDQ5MjI0MjcsImV4cCI6MTcwNDkyMzAyN30.gnPSeiFUbjtV02rZw-Qz38qZkTszBLwAYcNTIbFOnf8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9hbyIsImVtYWlsIjoiam9hb0Bqb2FvLmNvbSIsInN1YiI6ImNscjlmbjhndzAwMDFqN3VsamJ1dmppOHgiLCJpYXQiOjE3MDQ5OTEwNTQsImV4cCI6MTcwNDk5MTY1NH0.x19KRDchIhAVxIFI0GeRqXHOEkCRUtrGyi-dJeNDAM4
