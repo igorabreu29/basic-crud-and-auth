@@ -6,8 +6,8 @@ Content-Type: application/json
     "email": "joao@joao.com",
     "password": "joanaw",
     "lastname": "Abreu",
-    "birth": "29/01/2006",
-    "age": 18,
+    "birth": "20/09/2002",
+    "age": 22,
     "gender": "female",
     "father": "Mario Abreu",
     "mother": "Maria Abreu",
@@ -27,7 +27,7 @@ Content-Type: application/json
 DELETE http://localhost:3333/delete-user/clr8aoch500028bo4jr1gsniq
 
 ###
-PUT  http://localhost:3333/update-user/clr8am4tw00018bo401bd0qes
+PUT  http://localhost:3333/update-user/clr9e3vpo0000z8prgz6lj3os
 Content-Type: application/json
 
 {
@@ -35,8 +35,8 @@ Content-Type: application/json
     "email": "joao@test.com",
     "password": "nodejs",
     "lastname": "Abreu",
-    "birth": "20/11/2001",
-    "age": 22,
+    "birth": "20/09/2002",
+    "age": 21,
     "gender": "male",
     "father": "Mario Abreu",
     "mother": "Maria Abreu",
