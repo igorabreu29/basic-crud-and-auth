@@ -1,0 +1,51 @@
+POST http://localhost:3333/register
+Content-Type: application/json
+
+{
+    "name": "joao",
+    "email": "joao@joao.com",
+    "password": "joanaw",
+    "lastname": "Abreu",
+    "birth": "29/01/2006",
+    "age": 18,
+    "gender": "female",
+    "father": "Mario Abreu",
+    "mother": "Maria Abreu",
+    "address": "Unknow Street"
+}
+
+### 
+POST http://localhost:3333/auth
+Content-Type: application/json
+
+{
+    "email": "joao@joao.com",
+    "password": "joanaw"
+}
+
+### 
+DELETE http://localhost:3333/delete-user/clr8aoch500028bo4jr1gsniq
+
+###
+PUT  http://localhost:3333/update-user/clr8am4tw00018bo401bd0qes
+Content-Type: application/json
+
+{
+    "name": "Joao",
+    "email": "joao@test.com",
+    "password": "nodejs",
+    "lastname": "Abreu",
+    "birth": "20/11/2001",
+    "age": 22,
+    "gender": "male",
+    "father": "Mario Abreu",
+    "mother": "Maria Abreu",
+    "address": "Know Street"
+}
+
+###
+GET http://localhost:3333/users
+
+### 
+GET http://localhost:3333/resource
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9hbyIsImVtYWlsIjoiam9hb0Bqb2FvLmNvbSIsInN1YiI6ImNscjhhcnJyNDAwMDM4Ym80MXQ2aXBvZXkiLCJpYXQiOjE3MDQ5MjI0MjcsImV4cCI6MTcwNDkyMzAyN30.gnPSeiFUbjtV02rZw-Qz38qZkTszBLwAYcNTIbFOnf8
