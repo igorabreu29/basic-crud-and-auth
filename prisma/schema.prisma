@@ -11,15 +11,15 @@ datasource db {
 }
 
 model User {
-  id       String @id @default(cuid())
-  name     String
-  lastname String
-  age      Int
-  adress   String
-  birth    String
-  father   String
-  mother   String
-  gender   String
+  id        String   @id @default(cuid())
+  name      String
+  lastname  String
+  age       Int
+  address   String
+  birth     String
+  father    String
+  mother    String
+  gender    String
   email     String   @unique
   password  String
   createdAt DateTime @default(now())

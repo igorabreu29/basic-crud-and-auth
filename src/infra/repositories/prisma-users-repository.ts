@@ -43,7 +43,7 @@ export class PrismaUsersRepository implements UsersRepository {
                 lastname: data.lastname,
                 password: data.passwordHash,
                 gender: data.gender,
-                adress: data.address,
+                address: data.address,
                 birth: data.birth,
                 age: data.age as number,
                 father: data.parents.father,
@@ -63,7 +63,7 @@ export class PrismaUsersRepository implements UsersRepository {
             },
 
             data: {
-                adress: data.address,
+                address: data.address,
                 age: data.age,
                 birth: data.birth,
                 email: data.email,
@@ -103,7 +103,7 @@ function createUserInstanceEntity(user: UserType): User {
         lastname: user.lastname,
         gender: user.gender as Gender,
         birth: user.birth,
-        address: user.adress,
+        address: user.address,
         age: user.age,
         parents: {
           father: user.father,
