@@ -2,6 +2,7 @@ import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
 import { makeUpdateUserUseCase } from "../factories/make-update-user-use-case";
 import { ResourceNotFoundError } from "@/domain/app/errors/resource-not-found-error";
+import { ConflictBetweenBirthAndAgeError } from "@/domain/app/errors/conflict-between-birth-and-age-error";
 
 export async function updateUser(req: FastifyRequest, res: FastifyReply) {
     const updateParamsSchema = z.object({
@@ -36,7 +37,7 @@ export async function updateUser(req: FastifyRequest, res: FastifyReply) {
                     id: user.id.toString(),
                     name: user.name,
                     lastname: user.lastname,
-                    age: user.age,
+                    age: user.age ,
                     address: user.address,
                     birth: user.birth,
                     gender: user.gender,
@@ -50,6 +51,10 @@ export async function updateUser(req: FastifyRequest, res: FastifyReply) {
     } catch(err) {
         if (err instanceof ResourceNotFoundError) {
             return res.status(404).send({ message: err.message })
+        }
+
+        if (err instanceof ConflictBetweenBirthAndAgeError) {
+            return res.status(409).send({ message: err.message })
         }
 
         throw err

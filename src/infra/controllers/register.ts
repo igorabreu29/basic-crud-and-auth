@@ -1,3 +1,4 @@
+import { ConflictBetweenBirthAndAgeError } from "@/domain/app/errors/conflict-between-birth-and-age-error";
 import { UserAlreadyExistError } from "@/domain/app/errors/user-already-exit-error";
 import { makeRegisterUseCase } from "@/infra/factories/make-register-use-case";
 import { FastifyReply, FastifyRequest } from "fastify";
@@ -41,13 +42,23 @@ export async function register(req: FastifyRequest, res: FastifyReply) {
             user: {
                 id: user.id.toString(),
                 name: user.name,
+                lastname: user.lastname,
+                age: user.age ,
+                address: user.address,
+                birth: user.birth,
+                gender: user.gender,
+                father: user.parents.father,
+                mother: user.parents.mother,
                 email: user.email,
-                password: null,
-                createdAt: user.createdAt
+                password: user.passwordHash
             }
         })
     } catch(err) {
         if (err instanceof UserAlreadyExistError) {
+            return res.status(409).send({ message: err.message })
+        }
+
+        if (err instanceof ConflictBetweenBirthAndAgeError) {
             return res.status(409).send({ message: err.message })
         }
 

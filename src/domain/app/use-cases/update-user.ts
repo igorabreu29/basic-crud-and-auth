@@ -1,6 +1,7 @@
 import { UpdateUserUseCaseRequest, UpdateUserUseCaseResponse } from "@/types/user-use-cases-types.ts";
 import { UsersRepository } from "../repositories/users-repository.ts";
 import { ResourceNotFoundError } from "../errors/resource-not-found-error.ts";
+import { ConflictBetweenBirthAndAgeError } from "../errors/conflict-between-birth-and-age-error.ts";
 import bcryptjs from "bcryptjs";
 
 export class UpdateUserUseCase {
@@ -25,6 +26,10 @@ export class UpdateUserUseCase {
         }
 
         const updatedUser = await this.usersRepository.updateUser(updateUser, id)
+
+        if (!updatedUser.age) {
+            throw new ConflictBetweenBirthAndAgeError()
+        }
 
         return {
             user: updatedUser

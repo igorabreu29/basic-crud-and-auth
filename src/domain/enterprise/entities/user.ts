@@ -74,7 +74,7 @@ export class User {
         const currentAge = Math.floor(difference / (1000 * 60 * 60 * 24 * 365.25))
 
         if (currentAge !== this._age) {
-            return 
+            return undefined
         }
 
         return currentAge

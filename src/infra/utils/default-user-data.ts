@@ -1,4 +1,4 @@
-import { Gender } from "@/enterprise/entities/user"
+import { Gender } from "@/domain/enterprise/entities/user"
 
 interface User {
     name: string
