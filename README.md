@@ -33,12 +33,12 @@ Dentro do projeto, existe dois tipos de testes, o unitário e o de end-to-end
 
 ### Testes unitários
 ```
-    npm i test
+    npm run test
 ```
 
 ### Testes End-to-End
 ```
-    npm i test:e2e
+    npm run test:e2e
 ```
 
 ## Rotas da aplicação
